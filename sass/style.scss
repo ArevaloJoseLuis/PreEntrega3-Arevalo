@@ -6,13 +6,13 @@ $font-size-h2: 35px;
 $font-family-h3: Arial, Helvetica, sans-serif;
 $font-family-a: 'Open Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 $font-family-shadow: #979292 5px 5px 10px;
-$font-family-p: 'Quicksand', sans-serif;
+$font-family-p: 'Quicksand', sans-serif; 
 $font-size-p: 18px;
 
 * {
     margin: 0;
-    padding: 0;
-}
+    padding: 0; 
+} 
 
 /*Encabezado para todos---------------------------------------------------------*/
 
@@ -254,7 +254,7 @@ $font-size-p: 18px;
 /* ---------------Seccion Cuartos-------------------------------- */
 
 #cuartos {
-    background-image: url(/img/CuartoBlur.jpg);
+    background-image: url(../img/CuartoBlur.jpg);
     background-size: cover;
     filter: grayscale(1);
     height: 500px;
