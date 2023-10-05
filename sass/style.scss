@@ -1,0 +1,1149 @@
+/* Declaraciones de Variables */
+$font-color-a: white;
+$font-family-h1: 'Open Sans', sans-serif;
+$font-family-h2: 'Open Sans', sans-serif;
+$font-size-h2: 35px;
+$font-family-h3: Arial, Helvetica, sans-serif;
+$font-family-a: 'Open Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$font-family-shadow: #979292 5px 5px 10px;
+$font-family-p: 'Quicksand', sans-serif;
+$font-size-p: 18px;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Encabezado para todos---------------------------------------------------------*/
+
+#fondo {
+    background-image: url(../img/fondo.jpeg);
+    background-size: cover;
+    height: 650px;
+
+    @media screen and (max-device-width: 1023px) {
+        height: 500px;
+    }
+}
+
+#FondoHistoria {
+    background-image: url(../pousada/Img/fondo-historia.webp);
+    background-size: cover;
+    filter: grayscale(1);
+    height: 650px;
+
+}
+
+#idiomas {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #display {
+        display: flex;
+        width: 300px;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        @media screen and (max-device-width: 1250px) {
+            width: 150px;
+            height: 50px;
+            gap: 15px;
+        }
+
+        select {
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+}
+
+/*--------------NavBar-------------------------------------*/
+#navegacion {
+    height: 100px;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: white;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: white;
+}
+
+.navbar-nav {
+    li {
+        a {
+            color: $font-color-a;
+            font-size: 15px;
+            font-family: $font-family-a;
+            text-shadow: #000000 0px 0px 9px;
+            text-decoration-line: none;
+            border-bottom: none;
+            transition: all 2s;
+
+            &:hover {
+                color: $font-color-a;
+                font-size: 20px;
+                border-bottom: solid 1px white;
+
+
+            }
+
+        }
+    }
+}
+
+.dropdown-menu {
+    background-color: rgba(37, 9, 22, 0.600);
+
+    li {
+        a {
+            color: $font-color-a;
+            font-size: 15px;
+            font-family: $font-family-a;
+            text-shadow: $font-family-shadow;
+            text-decoration-line: none;
+
+            &:hover {
+                background-color: transparent !important;
+            }
+        }
+    }
+}
+
+
+/*--------------NavBar-------------------------------------*/
+
+/*--------------Titulo Estrella-------------------------------------*/
+#heaven {
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-device-width: 768px) {
+        height: 150px;
+    }
+
+    @media screen and (min-device-width: 769px) and (max-device-width: 1023px) {
+        height: 200px;
+
+    }
+
+    h1 {
+        font-family: $font-family-h1;
+        font-size: 100px;
+        color: #FFFFFF;
+        text-shadow: #000000 0px 0px 14px;
+
+        @media screen and (max-device-width: 768px) {
+            font-size: 60px;
+        }
+    }
+}
+
+
+/*--------------Titulo Estrella-------------------------------------*/
+
+/* -------------------------------Estilos Secciones INDEX*--------------------------------------/
+
+/* ---------------Seccion Experiencias-------------------------------- */
+
+#experiencias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    background-color: #c2b7aa44;
+
+    @media screen and (max-device-width: 1250px) {
+        height: auto;
+    }
+
+
+    .GridExperiencias {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 400px 400px 400px;
+        grid-gap: 10px;
+
+        @media screen and (min-device-width: 769px) and (max-device-width: 1250px) {
+            justify-content: space-between;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-gap: 10px;
+        }
+
+
+
+        @media screen and (max-device-width: 768px) {
+            justify-content: space-between;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+
+
+
+        .CuadroExperiencias {
+            position: relative;
+
+            &:hover .ExperienciasTitulo {
+                opacity: 1;
+            }
+
+            &:hover .ExperienciasImagen img {
+                filter: blur(2px);
+            }
+
+            .ExperienciasImagen {
+                line-height: 0;
+                overflow: hidden;
+
+                img {
+                    filter: blur(0px);
+                    transition: filter 0.3s ease-in;
+                    transform: scale(1.1);
+                }
+            }
+
+            .ExperienciasTitulo {
+                font-size: 1.5em;
+                font-weight: bold;
+                text-align: center;
+                text-decoration: none;
+                z-index: 1;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition: opacity .5s;
+                background: rgba(181, 173, 171, 0.473);
+                color: whitesmoke;
+                /* Posición del texto */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+
+        }
+
+    }
+
+}
+
+
+/* ---------------Seccion Experiencias-------------------------------- */
+
+/* ---------------Seccion Cuartos-------------------------------- */
+
+#cuartos {
+    background-image: url(/img/CuartoBlur.jpg);
+    background-size: cover;
+    filter: grayscale(1);
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+
+    @media screen and (max-device-width: 1023px) {
+        height: 300px;
+    }
+
+    .CajaCuartosDescripcion {
+        position: absolute;
+        display: flex;
+        padding: 30px;
+        justify-content: space-around;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        height: auto;
+        z-index: 1;
+    }
+
+    h2 {
+        text-decoration-line: underline;
+        text-decoration-color: whitesmoke;
+        font-family: $font-family-h2;
+        font-size: x-large;
+        color: whitesmoke;
+    }
+
+    p {
+        display: flex;
+        justify-content: flex-start;
+        font-family: $font-family-p;
+        font-size: medium;
+        color: whitesmoke;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+
+}
+
+#cuartos-color {
+    background-image: url(/img/CuartoBlur.jpg);
+    background-size: cover;
+    filter: grayscale(1);
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-device-width: 1023px) {
+        height: 300px;
+    }
+
+    .CajaCuartosDescripcion {
+        position: absolute;
+        display: flex;
+        padding: 30px;
+        justify-content: space-around;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        height: auto;
+        z-index: 1;
+    }
+
+    h2 {
+        text-decoration-line: underline;
+        text-decoration-color: whitesmoke;
+        font-family: $font-family-h2;
+        font-size: x-large;
+        color: whitesmoke;
+    }
+
+    p {
+        display: flex;
+        justify-content: flex-start;
+        font-family: $font-family-p;
+        font-size: medium;
+        color: whitesmoke;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+
+}
+
+/* ---------------Seccion Cuartos-------------------------------- */
+
+/* ---------------Seccion Footer-------------------------------- */
+
+.footer a {
+    color: #70726F;
+    font-size: 20px;
+    padding: 10px;
+    transition: all .5s ease;
+
+    &:hover {
+        color: rgb(0, 0, 0);
+    }
+}
+
+.link a {
+    color: #70726F;
+    font-size: 12px;
+    transition: all .5s ease;
+
+    &:hover {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+
+}
+
+/* ---------------Seccion Footer-------------------------------- */
+
+
+/* -------------------------------Estilos Secciones --------------------------------------*/
+
+/* ---------------Seccion Contacto (Form)
+ y FAQ-------------------------------- */
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5% 0 5% 0;
+
+    .mb-1 {
+        .form-control {
+            &:focus {
+                border-color: #1f1f1f;
+                outline: 0;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(0, 0, 0, .075);
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(0, 0, 0, .075);
+            }
+
+        }
+    }
+
+    .btn {
+        margin-top: 1%;
+    }
+}
+
+.img-contacto {
+    background-image: url(https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2019/05/20152451/Mandarin-Oriental-Hong-Kong-3.jpg);
+    background-size: cover;
+    height: 400px;
+}
+
+
+/* -------------------------------Estilos pagina La Pousada*--------------------------------------*/
+
+#carouselExampleIndicators {
+    z-index: -10;
+    .carousel-inner {
+        max-height: 600px !important;  
+
+        .carousel-item img {
+            min-height:200px;
+            object-fit:cover;
+            filter: grayscale(0.7);
+        }
+    }
+}
+
+#Galeria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+    background-color: #c2b7aa44;
+
+    @media screen and (max-device-width: 1250px) {
+        height: auto;
+    }
+
+    .GridGaleria {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 10px;
+
+        @media screen and (min-device-width: 769px) and (max-device-width: 1250px) {
+            justify-content: space-between;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-gap: 10px;
+        }
+
+        @media screen and (max-device-width: 768px) {
+            justify-content: space-between;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        .CuadroExperiencias {
+            position: relative;
+
+            &:hover .ExperienciasTitulo {
+                opacity: 1;
+            }
+
+            &:hover .ExperienciasImagen img {
+                filter: blur(2px);
+            }
+
+            .ExperienciasImagen {
+                line-height: 0;
+                overflow: hidden;
+
+                img {
+                    filter: blur(0px);
+                    transition: filter 0.3s ease-in;
+                    transform: scale(1.1);
+                }
+            }
+
+            .ExperienciasTitulo {
+                font-size: 1.5em;
+                font-weight: bold;
+                text-align: center;
+                text-decoration: none;
+                z-index: 1;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition: opacity .5s;
+                background: rgba(181, 173, 171, 0.473);
+                color: whitesmoke;
+                /* Posición del texto */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+
+        }
+
+    }
+}
+
+
+/* -------------------------------Estilos Cuartos/cuarto especifico--------------------------------------*/
+
+
+
+
+/* -------------------------------Estilos que se repiten*--------------------------------------*/
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    height: 40px;
+    width: 190px;
+    background-color: #c2b7aa;
+    text-decoration: none;
+
+    @media screen and (max-device-width: 1250px) {
+        margin-top: 0;
+    }
+
+    a {
+        color: $font-color-a;
+        text-align: center;
+        font-family: $font-family-a;
+        font-size: 15px;
+        text-decoration: none;
+
+        &:hover {
+            color: $font-color-a;
+        }
+    }
+
+
+
+}
+
+.btn.focus,
+.btn:focus,
+.btn:hover,
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+    color: transparent;
+    text-decoration: none;
+    outline: none !important;
+}
+
+/*-------------------Estilo Replican en Index - Expriencias ---------------------*/
+#cuadro_izq_foto_der_superpuestos {
+    display: flex;
+    height: 800px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-device-width: 1250px) {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .img_cuadro_izq_foto_der_superpuestos {
+        width: 900px;
+        height: 500px;
+        position: relative;
+        box-shadow: 0 4px 22.8px 15.2px rgba(170, 26, 26, 0.03);
+
+        @media screen and (max-device-width: 768px) {
+            width: 90%;
+            height: auto;
+            position: relative;
+            box-shadow: 0 4px 22.8px 15.2px rgba(170, 26, 26, 0.03);
+        }
+
+        @media screen and (min-device-width: 769px) and (max-device-width: 1023px) {
+            width: 95%;
+            height: auto;
+            position: relative;
+            box-shadow: 0 4px 22.8px 15.2px rgba(170, 26, 26, 0.03);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            filter: grayscale(0.8);
+        }
+
+    }
+
+    .quadrito {
+        display: flex;
+        padding: 30px;
+        justify-content: space-around;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        height: 445px;
+        background: #fff;
+        margin-right: -80px;
+        z-index: 1;
+        box-shadow: 0 4px 22.8px 15.2px rgba(0, 0, 0, .03);
+
+        @media screen and (max-device-width: 768px) {
+            padding: 15px;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 0px;
+            width: 90%;
+            height: auto;
+            background: #fafafa;
+            box-shadow: 1px 1px 10px 1px #545454a2;
+
+        }
+
+        @media screen and (min-device-width: 769px) and (max-device-width: 1250px) {
+            padding: 15px;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: -100px;
+            margin-right: 0px;
+            width: 50%;
+            height: auto;
+            background: #fafafa;
+            box-shadow: 1px 1px 10px 1px #545454a2;
+        }
+
+        h2 {
+            text-align: center;
+            text-decoration-line: underline;
+            text-decoration-color: #545454;
+            font-family: $font-family-h2;
+            font-size: x-large;
+            color: #545454;
+
+        }
+
+        p {
+            display: flex;
+            justify-content: flex-start;
+            text-align: center;
+            font-family: $font-family-p;
+            font-size: medium;
+            color: #7f7f90;
+            margin-top: 20px;
+
+            @media screen and (max-device-width: 1250px) {
+                justify-content: center;
+                text-align: center;
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+#cuadro_izq_foto_der_superpuestos_mirror {
+    display: flex;
+    height: 800px;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-device-width: 1250px) {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .img_cuadro_izq_foto_der_superpuestos_mirror {
+        width: 900px;
+        height: 500px;
+        position: relative;
+        box-shadow: 0 4px 22.8px 15.2px rgba(170, 26, 26, 0.03);
+
+        @media screen and (max-device-width: 768px) {
+            width: 90%;
+            height: auto;
+            position: relative;
+            box-shadow: 0 4px 22.8px 15.2px rgba(170, 26, 26, 0.03);
+        }
+
+        @media screen and (min-device-width: 769px) and (max-device-width: 1023px) {
+            width: 95%;
+            height: auto;
+            position: relative;
+            box-shadow: 0 4px 22.8px 15.2px rgba(170, 26, 26, 0.03);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            filter: grayscale(0.8);
+        }
+    }
+
+    .quadrito_mirror {
+        display: flex;
+        padding: 30px;
+        justify-content: space-around;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        height: 445px;
+        background: #fff;
+        margin-left: -80px;
+        z-index: 1;
+        box-shadow: 0 4px 22.8px 15.2px rgba(0, 0, 0, .03);
+
+        @media screen and (max-device-width: 768px) {
+            padding: 15px;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: 0px;
+            width: 90%;
+            height: auto;
+            background: #fafafa;
+            box-shadow: 1px 1px 10px 1px #545454a2;
+        }
+
+        @media screen and (min-device-width: 769px) and (max-device-width: 1250px) {
+            padding: 15px;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: -100px;
+            margin-left: 0px;
+            width: 50%;
+            height: auto;
+            background: #fafafa;
+            box-shadow: 1px 1px 10px 1px #545454a2;
+
+        }
+
+
+        h2 {
+            text-align: center;
+            text-decoration-line: underline;
+            text-decoration-color: #545454;
+            font-family: $font-family-h2;
+            font-size: x-large;
+            color: #545454;
+        }
+
+        p {
+            display: flex;
+            justify-content: flex-start;
+            text-align: center;
+            font-family: $font-family-p;
+            font-size: medium;
+            color: #7f7f90;
+            margin-top: 20px;
+
+            @media screen and (max-device-width: 1250px) {
+                justify-content: center;
+                text-align: center;
+                margin-top: 5px;
+            }
+
+        }
+    }
+}
+
+/*-------------------Estilo Replican en Pousada - Experiencias - Contacto - Cuartos ---------------------*/
+.centrar_cuadro-_superpuesto {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+
+    @media screen and (max-device-width: 768px){
+        display: flex;
+        justify-content: center;
+        height: auto;
+    }
+
+    @media screen and (min-device-width: 769px) and (max-device-width: 1023px){
+        display: flex;
+        justify-content: center;
+        height: auto;
+    }
+
+    .cuadro-superpuesto {
+        margin-top: -7%;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: auto;
+        background: #ffffffc5;
+        box-shadow: 10px 10px 22.8px 15.2px rgba(0, 0, 0, .03);
+
+        @media screen and (max-device-width: 768px){
+            width: 90%;
+            height: auto;
+        }
+
+        @media screen and (min-device-width: 769px) and (max-device-width: 1023px){
+            width: 90%;
+            height: auto;
+         }
+
+
+
+        .cuadro-superpuesto-interno {
+            height: 95%;
+            width: 95%;
+            margin: 10px;
+            padding: 10px;
+            background: #fff;
+            box-shadow: 0 4px 22.8px 15.2px rgba(0, 0, 0, .03);
+
+            .p-aislado {
+                margin-top: 10px;
+                text-align: center;
+                font-family: $font-family-p;
+                font-size: 15px;
+                color: #7f7f90;
+
+                a {
+                    color: #70726F;
+                    font-size: 15px;
+                    transition: all .5s ease;
+
+                    &:hover {
+                        color: rgb(0, 0, 0);
+                        text-decoration: none;
+                    }
+
+                }
+
+            }
+
+
+
+            .cuadro-texto-center {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+
+                ul {
+                    li {
+                        text-decoration: none;
+                        font-family: $font-family-p;
+                        font-size: $font-size-p;
+                        color: #7f7f90;
+                    }
+                }
+
+                h2 {
+                    margin: 0;
+                    text-align: center;
+                    text-decoration-line: underline;
+                    text-decoration-color: #545454;
+                    font-family: $font-family-h2;
+                    font-size: $font-size-h2;
+                    color: #545454;
+
+                }
+
+                p {
+                    margin-top: 10px;
+                    text-align: center;
+                    font-family: $font-family-p;
+                    font-size: $font-size-p;
+                    color: #7f7f90;
+
+                }
+            }
+        }
+    }
+
+}
+
+.accordion-button {
+    font-size: 15px !important;
+    font-family: $font-family-h2;
+
+    &:focus {
+        z-index: 3;
+        border-color: var(--bs-accordion-btn-focus-border-color);
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgba(154, 157, 163, 0.25);
+    }
+
+    &:not(.collapsed) {
+        color: #000000;
+        background-color: #6c757d5e;
+        box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+    }
+
+}
+
+
+
+.cuadro-superpuesto-check {
+    margin-top: -7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 500px;
+    background: #ffffffc5;
+    box-shadow: 10px 10px 22.8px 15.2px rgba(0, 0, 0, .03);
+    z-index: 1;
+
+    .cuadro-superpuesto-interno {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 95%;
+        width: 95%;
+        margin: 10px;
+        padding: 10px;
+        background: #fff;
+        box-shadow: 0 4px 22.8px 15.2px rgba(0, 0, 0, .03);
+    }
+
+    h2 {
+        margin: 0;
+        text-align: center;
+        text-decoration-line: underline;
+        text-decoration-color: #545454;
+        font-family: $font-family-h2;
+        font-size: $font-size-h2;
+        color: #545454;
+
+    }
+
+    .list_check {
+        margin: 20%;
+
+        input[type=file]:focus,
+        input[type=checkbox]:focus,
+        input[type=radio]:focus {
+            outline: none;
+            outline: none;
+            outline-offset: -2px;
+        }
+
+        .form-check-input:checked {
+            background-color: #545454;
+            border-color: #545454;
+        }
+    }
+
+}
+
+
+
+h1 {
+    text-align: center;
+    font-family: $font-family-h1;
+}
+
+h2 {
+    text-align: center;
+    text-decoration-line: underline;
+    text-decoration-color: #545454;
+    font-family: $font-family-h2;
+    font-size: $font-size-h2;
+    color: #545454;
+
+    @media screen and (max-device-width: 768px) {
+
+        margin: 0;
+
+    }
+
+    @media screen and (min-device-width: 769px) and (max-device-width: 1250px) {
+        margin: 0;
+    }
+
+
+}
+
+h3 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    font-size: 15px;
+    font-family: $font-family-h3;
+    font-style: oblique;
+
+
+}
+
+p {
+    font-size: 11px;
+    font-family: $font-family-p;
+    font-size: small;
+
+}
+
+
+/*--------------Configuraciones Responsivo------------------*/
+
+/* Mobile hasta 768px */
+
+@media screen and (max-device-width: 768px) {
+
+    /* ---------------Seccion Experiencias-------------------------------- */
+
+    .GridExperiencias article {
+        width: 300px;
+        height: 300px;
+
+    }
+
+    .GridGaleria article {
+        width: 300px;
+        height: 300px;
+
+    }
+
+    .ExperienciasImagen img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .GaleriaImagen img {
+        width: 300px;
+        height: 300px;
+    }
+
+    /* ---------------Seccion Cuartos-------------------------------- */
+
+    /* ---------- Estilos repetidos ----------*/
+
+    .cuadro-superpuesto-interno h2 {
+        font-size: large;
+    }
+
+    .cuadro-superpuesto-interno p {
+        font-size: small;
+    }
+
+    .cuadro-superpuesto-check {
+        margin-bottom: 5%;
+        width: 50%;
+        height: auto;
+
+    }
+
+    .list_check {
+        margin: 10%
+    }
+
+    #carouselExampleIndicators .carousel-inner {
+        height: auto;
+
+    }
+
+
+}
+
+/* Mobile hasta 768px */
+
+/* ------------------------------------------------------ */
+
+/* Laptop desde 769px hasta 1023px */
+
+@media screen and (min-device-width: 769px) and (max-device-width: 1250px) {
+
+
+    /* ---------------Seccion La Pousada-------------------------------- */
+
+    /* ---------------Seccion Experiencias-------------------------------- */
+
+    .GridExperiencias article {
+        width: 300px;
+        height: 300px;
+
+    }
+
+    .ExperienciasImagen img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .GridGaleria article {
+        width: 300px;
+        height: 300px;
+
+    }
+
+    .GaleriaImagen img {
+        width: 300px;
+        height: 300px;
+    }
+
+
+    /* ---------------Seccion Cuartos-------------------------------- */
+
+    #carouselExampleIndicators .carousel-inner {
+        height: auto;
+    }
+
+
+
+    /* --------------- Cuartos Check List-------------------------------- */
+    .cuadro-superpuesto-check {
+        margin-bottom: 5%;
+        width: 50%;
+        height: auto;
+
+    }
+
+    .list_check {
+        margin: 10%
+    }
+}
+
+/* Laptop desde 769px hasta 1023px */
