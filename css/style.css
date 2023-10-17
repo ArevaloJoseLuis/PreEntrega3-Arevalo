@@ -192,8 +192,6 @@
     height: auto;
     z-index: 1; }
   #cuartos h2 {
-    text-decoration-line: underline;
-    text-decoration-color: whitesmoke;
     font-family: "Open Sans", sans-serif;
     font-size: x-large;
     color: whitesmoke; }
@@ -230,8 +228,6 @@
     height: auto;
     z-index: 1; }
   #cuartos-color h2 {
-    text-decoration-line: underline;
-    text-decoration-color: whitesmoke;
     font-family: "Open Sans", sans-serif;
     font-size: x-large;
     color: whitesmoke; }
@@ -471,8 +467,6 @@
         box-shadow: 1px 1px 10px 1px #545454a2; } }
     #cuadro_izq_foto_der_superpuestos .quadrito h2 {
       text-align: center;
-      text-decoration-line: underline;
-      text-decoration-color: #545454;
       font-family: "Open Sans", sans-serif;
       font-size: x-large;
       color: #545454; }
@@ -562,8 +556,6 @@
         box-shadow: 1px 1px 10px 1px #545454a2; } }
     #cuadro_izq_foto_der_superpuestos_mirror .quadrito_mirror h2 {
       text-align: center;
-      text-decoration-line: underline;
-      text-decoration-color: #545454;
       font-family: "Open Sans", sans-serif;
       font-size: x-large;
       color: #545454; }
@@ -649,8 +641,6 @@
         .centrar_cuadro-_superpuesto .cuadro-superpuesto .cuadro-superpuesto-interno .cuadro-texto-center h2 {
           margin: 0;
           text-align: center;
-          text-decoration-line: underline;
-          text-decoration-color: #545454;
           font-family: "Open Sans", sans-serif;
           font-size: 35px;
           color: #545454; }
@@ -697,8 +687,6 @@
   .cuadro-superpuesto-check h2 {
     margin: 0;
     text-align: center;
-    text-decoration-line: underline;
-    text-decoration-color: #545454;
     font-family: "Open Sans", sans-serif;
     font-size: 35px;
     color: #545454; }
@@ -720,8 +708,6 @@ h1 {
 
 h2 {
   text-align: center;
-  text-decoration-line: underline;
-  text-decoration-color: #545454;
   font-family: "Open Sans", sans-serif;
   font-size: 35px;
   color: #545454; }
