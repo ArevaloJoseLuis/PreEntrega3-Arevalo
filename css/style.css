@@ -179,9 +179,8 @@
   align-items: center; }
   @media screen and (max-device-width: 1023px) {
     #cuartos {
-      height: 300px; } }
+      height: auto; } }
   #cuartos .CajaCuartosDescripcion {
-    position: absolute;
     display: flex;
     padding: 30px;
     justify-content: space-around;

@@ -265,11 +265,10 @@ $font-size-p: 18px;
     
 
     @media screen and (max-device-width: 1023px) {
-        height: 300px;
+        height: auto;
     }
 
     .CajaCuartosDescripcion {
-        position: absolute;
         display: flex;
         padding: 30px;
         justify-content: space-around;
