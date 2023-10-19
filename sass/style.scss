@@ -65,6 +65,16 @@ $font-size-p: 18px;
 /*--------------NavBar-------------------------------------*/
 #navegacion {
     height: 100px;
+
+    .navbar-collapse {
+       border-top: none !important;
+        box-shadow: none !important;      
+        
+        @media screen and (max-device-width: 768px) {
+            background-color: #000000bb;
+
+        }
+    }
 }
 
 .navbar-nav .nav-link.active,
@@ -101,7 +111,7 @@ $font-size-p: 18px;
 }
 
 .dropdown-menu {
-    background-color: rgba(37, 9, 22, 0.600);
+    background-color: #000000a6;
 
     li {
         a {
@@ -350,6 +360,11 @@ $font-size-p: 18px;
 /* ---------------Seccion Cuartos-------------------------------- */
 
 /* ---------------Seccion Footer-------------------------------- */
+ 
+.footerpad {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
 
 .footer a {
     color: #70726F;
