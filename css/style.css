@@ -711,15 +711,18 @@
 
 .accordion-button {
   font-size: 15px !important;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  text-shadow: 2px -1px 6px black;
+  background-color: #69514A;
+  color: whitesmoke; }
   .accordion-button:focus {
     z-index: 3;
     border-color: var(--bs-accordion-btn-focus-border-color);
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgba(154, 157, 163, 0.25); }
   .accordion-button:not(.collapsed) {
-    color: #000000;
-    background-color: #6c757d5e;
+    color: whitesmoke;
+    background-color: #6c757d;
     box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color); }
 
 .cuadro-superpuesto-check {
