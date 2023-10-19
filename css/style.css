@@ -16,7 +16,6 @@
 #FondoHistoria {
   background-image: url(../pousada/Img/fondo-historia.webp);
   background-size: cover;
-  filter: grayscale(1);
   height: 650px; }
 
 #idiomas {
@@ -177,7 +176,6 @@
 #cuartos {
   background-image: url(../img/CuartoBlur.jpg);
   background-size: cover;
-  filter: grayscale(1);
   height: 500px;
   display: flex;
   flex-direction: row;
@@ -198,16 +196,24 @@
     z-index: 1; }
   #cuartos h2 {
     font-family: "Open Sans", sans-serif;
-    font-size: x-large;
+    font-size: 35px;
     color: whitesmoke; }
+    @media screen and (max-device-width: 768px) {
+      #cuartos h2 {
+        font-size: x-large; } }
   #cuartos p {
     display: flex;
     justify-content: flex-start;
     font-family: "Quicksand", sans-serif;
-    font-size: medium;
+    font-size: 20px;
     color: whitesmoke;
     margin-top: 20px;
-    text-align: center; }
+    text-align: center;
+    text-shadow: 2px -1px 4px black;
+    background-color: #0000009a; }
+    @media screen and (max-device-width: 768px) {
+      #cuartos p {
+        font-size: medium; } }
 
 #cuartos-color {
   background-image: url(../img/CuartoBlur.jpg);
@@ -229,18 +235,18 @@
     gap: 20px;
     flex-direction: column;
     align-items: center;
-    width: 400px;
+    width: 500px;
     height: auto;
     z-index: 1; }
   #cuartos-color h2 {
     font-family: "Open Sans", sans-serif;
-    font-size: x-large;
+    font-size: 35px;
     color: whitesmoke; }
   #cuartos-color p {
     display: flex;
     justify-content: flex-start;
     font-family: "Quicksand", sans-serif;
-    font-size: medium;
+    font-size: 20px;
     color: whitesmoke;
     margin-top: 20px;
     text-align: center; }
@@ -288,6 +294,18 @@
   background-image: url(https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2019/05/20152451/Mandarin-Oriental-Hong-Kong-3.jpg);
   background-size: cover;
   height: 400px; }
+
+#img_faq {
+  background-image: url(../img/CuartoBlur.jpg);
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  @media screen and (max-device-width: 1023px) {
+    #img_faq {
+      height: 400px; } }
 
 /* -------------------------------Estilos pagina La Pousada*--------------------------------------*/
 #carouselExampleIndicators {
@@ -444,7 +462,6 @@
     display: flex;
     padding: 30px;
     justify-content: space-around;
-    gap: 20px;
     flex-direction: column;
     align-items: center;
     width: 400px;
@@ -477,16 +494,24 @@
     #cuadro_izq_foto_der_superpuestos .quadrito h2 {
       text-align: center;
       font-family: "Open Sans", sans-serif;
-      font-size: x-large;
-      color: #545454; }
+      font-size: 30px;
+      color: #545454;
+      margin-top: 0;
+      margin-bottom: 0; }
+      @media screen and (max-device-width: 768px) {
+        #cuadro_izq_foto_der_superpuestos .quadrito h2 {
+          font-size: x-large; } }
     #cuadro_izq_foto_der_superpuestos .quadrito p {
       display: flex;
       justify-content: flex-start;
       text-align: center;
       font-family: "Quicksand", sans-serif;
-      font-size: medium;
+      font-size: large;
       color: #565661;
       margin-top: 20px; }
+      @media screen and (max-device-width: 768px) {
+        #cuadro_izq_foto_der_superpuestos .quadrito p {
+          font-size: medium; } }
       @media screen and (max-device-width: 1250px) {
         #cuadro_izq_foto_der_superpuestos .quadrito p {
           justify-content: center;
@@ -533,7 +558,6 @@
     display: flex;
     padding: 30px;
     justify-content: space-around;
-    gap: 20px;
     flex-direction: column;
     align-items: center;
     width: 400px;
@@ -566,16 +590,24 @@
     #cuadro_izq_foto_der_superpuestos_mirror .quadrito_mirror h2 {
       text-align: center;
       font-family: "Open Sans", sans-serif;
-      font-size: x-large;
-      color: #545454; }
+      font-size: 30px;
+      color: #545454;
+      margin-top: 0;
+      margin-bottom: 0; }
+      @media screen and (max-device-width: 768px) {
+        #cuadro_izq_foto_der_superpuestos_mirror .quadrito_mirror h2 {
+          font-size: x-large; } }
     #cuadro_izq_foto_der_superpuestos_mirror .quadrito_mirror p {
       display: flex;
       justify-content: flex-start;
       text-align: center;
       font-family: "Quicksand", sans-serif;
-      font-size: medium;
+      font-size: large;
       color: #565661;
       margin-top: 20px; }
+      @media screen and (max-device-width: 768px) {
+        #cuadro_izq_foto_der_superpuestos_mirror .quadrito_mirror p {
+          font-size: medium; } }
       @media screen and (max-device-width: 1250px) {
         #cuadro_izq_foto_der_superpuestos_mirror .quadrito_mirror p {
           justify-content: center;
@@ -583,6 +615,14 @@
           margin-top: 5px; } }
 
 /*-------------------Estilo Replican en Pousada - Experiencias - Contacto - Cuartos ---------------------*/
+.list_check_p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  color: #7f7f90; }
+  @media screen and (max-device-width: 768px) {
+    .list_check_p {
+      font-size: medium; } }
+
 .centrar_cuadro-_superpuesto {
   display: flex;
   justify-content: center;
@@ -592,7 +632,7 @@
       display: flex;
       justify-content: center;
       height: auto; } }
-  @media screen and (min-device-width: 769px) and (max-device-width: 1023px) {
+  @media screen and (min-device-width: 769px) and (max-device-width: 1400px) {
     .centrar_cuadro-_superpuesto {
       display: flex;
       justify-content: center;
@@ -645,20 +685,29 @@
         .centrar_cuadro-_superpuesto .cuadro-superpuesto .cuadro-superpuesto-interno .cuadro-texto-center ul li {
           text-decoration: none;
           font-family: "Quicksand", sans-serif;
-          font-size: 18px;
+          font-size: 20px;
           color: #7f7f90; }
+          @media screen and (max-device-width: 768px) {
+            .centrar_cuadro-_superpuesto .cuadro-superpuesto .cuadro-superpuesto-interno .cuadro-texto-center ul li {
+              font-size: medium; } }
         .centrar_cuadro-_superpuesto .cuadro-superpuesto .cuadro-superpuesto-interno .cuadro-texto-center h2 {
           margin: 0;
           text-align: center;
           font-family: "Open Sans", sans-serif;
           font-size: 35px;
           color: #545454; }
+          @media screen and (max-device-width: 768px) {
+            .centrar_cuadro-_superpuesto .cuadro-superpuesto .cuadro-superpuesto-interno .cuadro-texto-center h2 {
+              font-size: x-large; } }
         .centrar_cuadro-_superpuesto .cuadro-superpuesto .cuadro-superpuesto-interno .cuadro-texto-center p {
           margin-top: 10px;
           text-align: center;
           font-family: "Quicksand", sans-serif;
-          font-size: 18px;
+          font-size: 20px;
           color: #7f7f90; }
+          @media screen and (max-device-width: 768px) {
+            .centrar_cuadro-_superpuesto .cuadro-superpuesto .cuadro-superpuesto-interno .cuadro-texto-center p {
+              font-size: medium; } }
 
 .accordion-button {
   font-size: 15px !important;
@@ -678,8 +727,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25%;
-  height: 500px;
+  width: 50%;
+  height: auto;
   background: #ffffffc5;
   box-shadow: 10px 10px 22.8px 15.2px rgba(0, 0, 0, 0.03);
   z-index: 1; }
@@ -699,8 +748,18 @@
     font-family: "Open Sans", sans-serif;
     font-size: 35px;
     color: #545454; }
+    @media screen and (max-device-width: 768px) {
+      .cuadro-superpuesto-check h2 {
+        font-size: x-large; } }
   .cuadro-superpuesto-check .list_check {
-    margin: 20%; }
+    margin-top: 10%;
+    margin-bottom: 10%; }
+    @media screen and (max-device-width: 768px) {
+      .cuadro-superpuesto-check .list_check {
+        margin: 10%; } }
+    @media screen and (min-device-width: 769px) and (max-device-width: 1023px) {
+      .cuadro-superpuesto-check .list_check {
+        margin: 10%; } }
     .cuadro-superpuesto-check .list_check input[type=file]:focus,
     .cuadro-superpuesto-check .list_check input[type=checkbox]:focus,
     .cuadro-superpuesto-check .list_check input[type=radio]:focus {
@@ -722,10 +781,7 @@ h2 {
   color: #545454; }
   @media screen and (max-device-width: 768px) {
     h2 {
-      margin: 0; } }
-  @media screen and (min-device-width: 769px) and (max-device-width: 1250px) {
-    h2 {
-      margin: 0; } }
+      font-size: x-large; } }
 
 h3 {
   margin-top: 0 !important;
@@ -757,16 +813,10 @@ p {
     height: 300px; }
   /* ---------------Seccion Cuartos-------------------------------- */
   /* ---------- Estilos repetidos ----------*/
-  .cuadro-superpuesto-interno h2 {
-    font-size: large; }
-  .cuadro-superpuesto-interno p {
-    font-size: small; }
   .cuadro-superpuesto-check {
     margin-bottom: 5%;
-    width: 50%;
+    width: 90%;
     height: auto; }
-  .list_check {
-    margin: 10%; }
   #carouselExampleIndicators .carousel-inner {
     height: auto; } }
 
@@ -790,13 +840,13 @@ p {
     height: 300px; }
   /* ---------------Seccion Cuartos-------------------------------- */
   #carouselExampleIndicators .carousel-inner {
-    height: auto; }
+    height: auto; } }
+
+@media screen and (min-device-width: 769px) and (max-device-width: 1023px) {
   /* --------------- Cuartos Check List-------------------------------- */
   .cuadro-superpuesto-check {
     margin-bottom: 5%;
-    width: 50%;
-    height: auto; }
-  .list_check {
-    margin: 10%; } }
+    width: 90%;
+    height: auto; } }
 
 /* Laptop desde 769px hasta 1023px */
