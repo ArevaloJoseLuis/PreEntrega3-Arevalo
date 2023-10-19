@@ -267,7 +267,7 @@
 
 .link a {
   color: #70726F;
-  font-size: 12px;
+  font-size: 15px;
   transition: all .5s ease; }
   .link a:hover {
     color: black;
@@ -794,9 +794,9 @@ h3 {
   font-style: oblique; }
 
 p {
-  font-size: 11px;
+  font-size: 15px;
   font-family: "Quicksand", sans-serif;
-  font-size: small; }
+  color: #7f7f90; }
 
 /*--------------Configuraciones Responsivo------------------*/
 /* Mobile hasta 768px */
